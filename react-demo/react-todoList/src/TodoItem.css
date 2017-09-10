@@ -1,0 +1,21 @@
+.TodoItem{
+  padding: .5em;
+  display: flex;
+  align-items: center;
+}
+.TodoItem>.title{
+  flex-grow: 1;
+  max-width: 80%;
+  padding: 0 .5em;
+  word-wrap:break-word; 
+  word-break:break-all;
+}
+.TodoItem>.delete{
+  font-size: 14px;
+  color: black;
+  opacity: 0.35;
+  cursor:pointer;
+}
+.TodoItem>.delete:hover{
+  opacity: 0.85;
+}

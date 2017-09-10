@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+#draw {
+    border: 10px solid #666;
+}
+#page {
+    display: flex;
+    justify-content: space-between;
+}
+#edit {
+    flex-grow: 1;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+#edit>section {
+    border-top: 1px solid #E2E3E4;
+    padding-top: 10px;
+}
+#edit {
+    background: #F5F6F7;
+    text-align: center;
+}
+section>div {
+    border: 1px solid;
+    line-height: 16px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.allColor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:0;
+    cursor: default;
+}
+.allColor>div{
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin: 3px;
+    cursor: pointer;
+}
+.backgroundColor {
+    background-color: #999;
+}
+section>span {
+    display: inline-block;
+}
+/* 模态框 */
+#modul {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #bbb;
+    box-shadow: 0 0 0 1000px rgba(0,0,0, 0.3);
+    padding: 10px 15px;
+}

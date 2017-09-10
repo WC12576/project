@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>苹果banner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/apple.css">
+</head>
+
+<body>
+    <div class="containe">
+        <a class="arrow-left" href="#"><span></span></a>
+        <a class="arrow-right" href="#"><span></span></a>
+        <div class="wrapper">
+            <div class="slide slide1">
+                <div class="title">
+                    <h2>iPad Pro</h2>
+                    <p>不只能做到，</p>
+                    <p>还能做到更好。</p>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="title">
+                    <h2>iOS 11</h2>
+                    <p>为iPhone带来巨大进步，</p>
+                    <p>让iPad实现里程碑式飞跃。</p>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="title">
+                    <h2>Mac</h2>
+                    <p>全线提速。</p>
+                </div>
+            </div>
+            <div class="slide slide4">
+                <div class="title">
+                    <h2>macOS High Sierra</h2>
+                    <p>你的Mac，登上更高峰。</p>
+                </div>
+            </div>
+            <div class="slide slide5">
+                <div class="title">
+                    <h2>watchOS</h2>
+                    <p>更直观，更智能，更显你的风格。</p>
+                </div>
+            </div>
+        </div>
+        <ul class="pagination">
+            <li><span><i></i></span></li>
+            <li><span><i></i></span></li>
+            <li><span><i></i></span></li>
+            <li><span><i></i></span></li>
+            <li><span><i></i></span></li>
+        </ul>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+        var $container = $('.containe')
+        var $wrapper = $container.children('.wrapper')
+        var $ul = $container.children('.pagination')
+        var count = $wrapper.find('.slide').length
+        var currentIndex = 0
+        var timeId
+        $ul.find('li').eq(0).addClass('active').siblings().removeClass('active')
+        $ul.on('click', 'li', function (e) {
+            let $li = $(e.currentTarget)
+            let index = $li.index()
+            goToSlide(index)
+        })
+        $('.arrow-left').click(function () {
+            clearInterval(timeId)
+            currentIndex--
+            goToSlide(currentIndex)
+            $ul.find('li').removeClass('arrow active').eq(currentIndex).addClass('arrow')
+            console.log(currentIndex)
+        })
+        $('.arrow-right').click(function () {
+            clearInterval(timeId)
+            currentIndex++
+            goToSlide(currentIndex)
+
+            $ul.find('li').removeClass('arrow active').eq(currentIndex).addClass('arrow')
+            if (currentIndex === 5) {
+                $ul.find('li').removeClass('arrow active').eq(0).addClass('arrow')
+            }
+            console.log(currentIndex)
+        })
+        function goToSlide(index) {
+            if (index < 0) {
+                index = count - 1
+            } else if (index >= count) {
+                index = 0
+            }
+            if (index === 0) {
+                let $slide = $wrapper.find('.slide').eq(0).clone()
+                console.log($slide)
+                $slide.appendTo($wrapper)
+                $wrapper.css({
+                    transform: `translateX(${number}px)`
+                })
+                let width = $container.width()
+                let number = - width * count
+                $wrapper.one("transitionend", function () {
+                    $slide.remove()
+                    let oldTransition = $wrapper.css('transition')
+
+                    $wrapper.css({
+                        transition: 'none',
+                        transform: `translateX(0px)`
+                    })
+                    $wrapper.offset()
+                    $wrapper.css('transition', oldTransition)
+                    currentIndex = index
+                })
+
+                $ul.find('li').eq(0).addClass('active').siblings().removeClass('arrow active')
+                return
+            }
+
+            let width = $container.width()
+            let number = - width * index
+            $wrapper.css({
+                transform: `translateX(${number}px)`
+            })
+            let $li = $ul.find('li')
+            $li.eq(index).addClass('active').siblings().removeClass('arrow active')
+            currentIndex = index
+        }
+        function autoPlay() {
+            timeId = setInterval(function () {
+                goToSlide(currentIndex + 1)
+            }, 4000)
+        }
+        autoPlay()
+        $wrapper.on('mouseenter', function () {
+            clearInterval(timeId)
+        })
+        $wrapper.on('mouseleave', function () {
+            autoPlay()
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.App {
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: #F5F6F5;
+  margin: 2em;
+  padding: 0 3em;
+  height: 32em;
+  width: 32em;
+  box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
+}
+.App > h1{
+  padding: 24px 0;
+  text-align: center;
+  font-size: 24px;
+  position: relative;
+}
+.App > h1 > span{
+  padding: 24px 0;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  opacity: 0.35;
+  position: absolute;
+  right: 0;
+  cursor:pointer
+}
+.App > h1 > span:hover{
+  opacity: 0.85;
+}
+.App .inputWrapper{
+  padding: 16px 0;
+}
+.App > .todoList{
+  overflow: hidden;
+}
+.App > .todoList> li:nth-child(odd){
+  background: #eee;
+}
+.App > .todoList> li:nth-child(even){
+  background: transparent;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>王成</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="aside">
+        <div class="photo"></div>
+        <a href="javascript:void(0)" class="myname">王成</a>
+        <div class="showlist">
+            <div class="board"></div>
+        </div>
+        <div class="hidelist">
+        </div>
+        <div class="navdetails">
+            <div class="nav">
+                <ul>
+                    <li><a href="javascript:void(0)" style="color: #f9c427">01 简介</a></li>
+                    <li><a href="mypro.html">02 作品</a></li>
+                    <li><a href="myskill.html">03 技能</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <svg class="icon" aria-hidden="true" style="fill: #55acee">
+                                <use xlink:href="#icon-youxiang"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.jianshu.com/u/f6577a125175" target="_blank">
+                            <svg class="icon" aria-hidden="true" style="fill: #ea4c89">
+                                <use xlink:href="#icon-blog"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/WC12576" target="_blank">
+                            <svg class="icon" aria-hidden="true" style="fill: #fff">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <svg class="icon" aria-hidden="true" style="fill: #00ab6c">
+                                <use xlink:href="#icon-weixin-copy"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copy">© copyright 王成,2017</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="resume">
+            <h1>个人简介</h1>
+            <table cellpadding="5">
+                <tr>
+                    <td align="right">姓名：</td>
+                    <td>王成</td>
+                </tr>
+                <tr>
+                    <td>出生日期：</td>
+                    <td>1991年4月</td>
+                </tr>
+                <tr>
+                    <td>意向职位：</td>
+                    <td>前端工程师</td>
+                </tr>
+                <tr>
+                    <td>教育经历：</td>
+                    <td>南京航空航天大学</td>
+                </tr>
+                <tr>
+                    <td align="right">电话：</td>
+                    <td>15907987759</td>
+                </tr>
+                <tr>
+                    <td align="right">邮箱：</td>
+                    <td>wangcheng19910418@163.com</td>
+                </tr>
+            </table>
+            <div class="intro">
+                <p>性格幽默，喜欢运动，爱编程，爱前端，喜欢研究新知识，有良好的时间概念，能够在约定的时间内完成任务，希望找到一份前端工程师的工作，加入一个热情洋溢的团队，提高自己的能力和技术，使自己成长的同时，能更好的为这个团队服务。</p>
+                <p> 我是一个对工作充满热情，对挑战充满激情的90后，有合适的职位就快来联系我吧!</p>
+            </div>
+        </div>
+    </div>
+    <script src="//at.alicdn.com/t/font_406874_luj4letynb384cxr.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $('.showlist').on('click',function(){
+        $(this).toggle();
+           $('.hidelist').toggle();
+           $('.navdetails').addClass('active');
+       });
+        $('.hidelist').on('click',function(){
+        $(this).toggle();
+           $('.showlist').toggle();
+           $('.navdetails').removeClass('active');
+       });
+   </script>
+</body>
+
+</html>

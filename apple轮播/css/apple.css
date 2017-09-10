@@ -1,0 +1,167 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "microsoft yahei", Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #333;
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+}
+
+.containe {
+	width: 100%;
+	height: 800px;
+	overflow: hidden;
+}
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 3s ; 
+}
+.slide{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+.slide .title{
+    position: absolute;
+    top: 10%;
+    width: 500px;
+    text-align: center;
+    color: black;
+}
+.slide .title h2{
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+.slide .title p{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.slide1 {
+	background: #FAFAFA url(../img/apple-1.jpg) no-repeat center 70%;
+	background-size: auto 40%;
+}
+.slide2 {
+	background: #FAFAFA url(../img/apple-5.jpg) no-repeat center 70%;
+	background-size: 75% auto;
+}
+.slide3 {
+	background: #FAFAFA url(../img/apple-2.jpg) no-repeat center 70%;
+	background-size: 35% auto;
+}
+.slide4{
+	background: #FAFAFA url(../img/apple-3.jpg) no-repeat center 70%;
+	background-size: auto 50%;
+}
+.slide5{
+	background: #FAFAFA url(../img/apple-4.jpg) no-repeat center 70%;
+	background-size: auto 50%;
+}
+.pagination {
+	position: absolute;
+	left: 0;
+	text-align: center;
+	top: 750px;
+	width: 100%;
+}
+.pagination li {
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	margin: 0 3px;
+	cursor: pointer;
+}
+
+.pagination li span {
+	width: 50px;
+	height: 2px;
+	display: block;
+	background: rgba(128,128,128,0.2);
+}
+
+.pagination li span i {
+	background: gray;
+	height: 2px;
+	display: block;
+    transform: scaleX(0);
+	transform-origin: 0;
+	opacity: 1;
+}
+.pagination li.active span i{
+    transform: scaleX(1);
+	transition: all 4s linear;
+}
+.pagination li.arrow span i{
+    transform: scaleX(1);
+}
+.arrow-left {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width: 15%;
+	height: 100%;
+	z-index: 999;
+}
+
+.arrow-left span {
+	margin-top: -32px;
+	display: block;
+	left: 20px;
+	top: 50%;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	background: rgba(180,180,180,0.25) url(../img/arrows.png) no-repeat center 15px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+}
+
+.arrow-left:hover span {
+	opacity: .6;
+}
+
+.arrow-right {
+	position: absolute;
+	right: 0px;
+	top: 0;
+	width: 15%;
+	height: 100%;
+	z-index: 999;
+}
+
+.arrow-right span {
+	margin-top: -32px;
+	display: block;
+	right: 20px;
+	top: 50%;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	background: rgba(180,180,180,0.25) url(../img/arrows.png) no-repeat center -70px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+}
+
+.arrow-right:hover span {
+	opacity: .6;
+}
+
+

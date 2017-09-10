@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>王成</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="aside">
+        <div class="photo"></div>
+        <a href="javascript:void(0)" class="myname">王成</a>
+        <div class="showlist">
+            <div class="board"></div>
+        </div>
+        <div class="hidelist">
+        </div>
+        <div class="navdetails">
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">01 简介</a></li>
+                    <li><a href="mypro.html">02 作品</a></li>
+                    <li><a href="javascript:void(0)" style="color: #f9c427">03 技能</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <svg class="icon" aria-hidden="true" style="fill: #55acee">
+                                <use xlink:href="#icon-youxiang"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.jianshu.com/u/f6577a125175" target="_blank">
+                            <svg class="icon" aria-hidden="true" style="fill: #ea4c89">
+                                <use xlink:href="#icon-blog"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/WC12576" target="_blank">
+                            <svg class="icon" aria-hidden="true" style="fill: #fff">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <svg class="icon" aria-hidden="true" style="fill: #00ab6c">
+                                <use xlink:href="#icon-weixin-copy"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copy">© copyright 王成,2017</p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h2>我的技能</h2>
+        <div id="skill"></div>
+        <div class="info">
+            <div class="ability">
+                <p>能力技能</p>
+                <ul>
+                    <li>熟悉使用PhotoShop切图，像素级重构，可准确还原设计</li>
+                    <li>熟悉HTML、CSS、页面架构和布局，对Web标准和标签语义化有深入理解</li>
+                    <li>熟悉Ajax、JavaScript、jQuery等前端技术</li>
+                    <li>了解ECMA5的标签规范以及HTML5新标签及CSS3样式及动画</li>
+                </ul>
+            </div>
+            <div class="trait">
+                <p>优势特长</p>
+                <ul>
+                    <li>了解Vue、React、webpack、ECharts等前端框架工具</li>
+                    <li>良好的逻辑思维能力和团队合作能力，有快速分析和解决问题的能力</li>
+                    <li>有解决问题、钻研新技术的兴趣和能力，善于交流和表达</li>
+                    <li>了解命令行操作</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="//at.alicdn.com/t/font_406874_luj4letynb384cxr.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        var myChart = echarts.init(document.getElementById('skill'));
+        var option = {
+            title: {
+                text: ''
+            },
+            tooltip: {},
+            legend: {
+                data: ['兴趣', '能力']
+            },
+            radar: {
+                // shape: 'circle',
+                name: {
+                    textStyle: {
+                        color: '#999',
+                        backgroundColor: '',
+                        borderRadius: 3,
+                        padding: [4, 5]
+                    }
+                },
+                indicator: [
+                    { name: 'HTML5', max: 100 },
+                    { name: 'CSS', max: 100 },
+                    { name: 'JavaScript', max: 100 },
+                    { name: 'jQuery', max: 100 },
+                    { name: 'git', max: 100 },
+                    { name: 'Vue', max: 100 },
+                    { name: 'React', max: 100 },
+                ]
+            },
+            series: [{
+                name: '兴趣 vs 能力',
+                type: 'radar',
+                // areaStyle: {normal: {}},
+                data: [
+                    {
+                        value: [95, 100, 80, 85, 80, 95, 95],
+                        name: '兴趣'
+                    },
+                    {
+                        value: [90, 85, 65, 80, 70, 70, 65],
+                        name: '能力'
+                    }
+                ]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+    <script>
+        $('.showlist').on('click',function(){
+        $(this).toggle();
+           $('.hidelist').toggle();
+           $('.navdetails').addClass('active');
+       });
+        $('.hidelist').on('click',function(){
+        $(this).toggle();
+           $('.showlist').toggle();
+           $('.navdetails').removeClass('active');
+       });
+   </script>
+
+</body>
+
+</html>

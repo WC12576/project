@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>logo-search</title>
+    <style>
+        .logo-search {
+            width: 1200px;
+            margin: 5px auto;
+        }
+
+        .logo,
+        .search {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .logo>img{
+            height: 200px;
+        }
+        .search {
+            margin-top: 100px;
+            margin-left: 90px;
+            margin-right: 100px;
+        }
+
+        .search>p>input {
+            width: 446px;
+            height: 24px;
+            line-height: 24px;
+            padding: 4px;
+            border: 2px solid #b61d1d;
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: rgb(153, 153, 153);
+        }
+
+        .search>p>input:focus {
+            outline: none;
+        }
+
+        .search>p>button {
+            width: 82px;
+            height: 36px;
+            line-height: 1;
+            background: #b61d1d;
+            color: #fff;
+            font-size: 16px;
+            font-family: "microsoft yahei";
+            cursor: pointer;
+            border: none;
+            vertical-align: top;
+        }
+
+        .search>p>button:focus {
+            outline: none;
+        }
+
+        .search>.hotword {
+            margin-top: 5px;
+        }
+
+        .search a {
+            margin-right: 10px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .search a:hover {
+            color: #c81623;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-search">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="logo">
+        </div>
+        <div class="search">
+            <p><input type="text" placeholder="饥人谷"><button>搜索</button></p>
+            <p class="hotword">
+                <a href="">T恤男</a>
+                <a href="">连衣裙</a>
+                <a href="">夏凉被</a>
+                <a href="">电动牙刷</a>
+                <a href="">卧室灯</a>
+                <a href="">防晒衣</a>
+                <a href="">凉鞋</a>
+                <a href="">双肩包</a>
+                <a href="">口红</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

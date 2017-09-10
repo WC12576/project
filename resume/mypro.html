@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>王成</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="aside">
+        <div class="photo"></div>
+        <a href="javascript:void(0)" class="myname">王成</a>
+        <div class="showlist">
+            <div class="board"></div>
+        </div>
+        <div class="hidelist">
+        </div>
+        <div class="navdetails">
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">01 简介</a></li>
+                    <li><a href="javascript:void(0)" style="color: #f9c427">02 作品</a></li>
+                    <li><a href="myskill.html">03 技能</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <svg class="icon" aria-hidden="true" style="fill: #55acee">
+                                <use xlink:href="#icon-youxiang"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.jianshu.com/u/f6577a125175" target="_blank">
+                            <svg class="icon" aria-hidden="true" style="fill: #ea4c89">
+                                <use xlink:href="#icon-blog"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/WC12576" target="_blank">
+                            <svg class="icon" aria-hidden="true" style="fill: #fff">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <svg class="icon" aria-hidden="true" style="fill: #00ab6c">
+                                <use xlink:href="#icon-weixin-copy"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copy">© copyright 王成,2017</p>
+        </div>
+    </div>
+    <div class="mypro">
+        <div class="pro">
+            <h1>主要项目</h1>
+            <div class="prolist">
+                <a class="bg4" href="https://wc12576.github.io/project/canvas-demo/index.html" target="_blank"><img src="img/canvas.jpg" alt="">
+                        <h2>画板</h2>
+                        <p>canvas画布，主要运用html、css、JS等</p>
+                    </a>
+                <a class="bg2" href="https://wc12576.github.io/project/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/index.html" target="_blank"><img src="img/music.jpg" alt="">
+                        <h2>网易云音乐</h2>
+                        <p>实现移动端网页版网易云音乐，主要运用html、css、jQuery等</p>
+                    </a>
+                <a class="bg3" href="https://wc12576.github.io/project/react-demo/vue-demo/dist/index.html" target="_blank"><img src="img/vue.jpg" alt="">
+                        <h2>在线简历编辑器</h2>
+                        <p>带有注册登录功能的在线简历编辑器，主要运用html、css、Vue等</p>
+                    </a>
+                <a class="bg1" href="https://wc12576.github.io/project/%E7%BA%AA%E5%BF%B5%E7%A2%91%E8%B0%B7/index.html" target="_blank"><img src="img/jinian.jpg" alt="">
+                        <h2>纪念碑谷</h2>
+                        <p>纯CSS高度还原纪念碑谷动态图画，主要运用html、css等</p>
+                    </a>
+            </div>
+        </div>
+        <div class="pro">
+            <h1>闲暇时光</h1>
+            <div class="prolist">
+                <a class="bg8" href="https://wc12576.github.io/project/react-demo/react-todoList/build/index.html" target="_blank"><img src="img/react.jpg" alt="">
+                        <h2>TodoList</h2>
+                        <p>带有注册登录功能的TodoList，主要运用html、css、React等</p>
+                    </a>
+                <a class="bg5" href="https://wc12576.github.io/project/TMALL/tianmao.html" target="_blank"><img src="img/tianmao.jpg" alt="">
+                        <h2>天猫商城首页</h2>
+                        <p>高度天猫商城首页，主要运用html、css等</p>
+                    </a>
+                <a class="bg6" href="https://wc12576.github.io/project/rem/rem.html" target="_blank"><img src="img/login.jpg" alt="">
+                        <h2>漂亮登陆框</h2>
+                        <p>适配任何移动端的登陆框，主要运用html、css、rem等</p>
+                    </a>
+                <a class="bg7" href="https://wc12576.github.io/project/apple轮播/apple3.htm" target="_blank"><img src="img/slides.jpg" alt="">
+                        <h2>仿苹果商城轮播</h2>
+                        <p>仿写苹果商城首页轮播特效，主要运用html、css、JS等</p>
+                    </a>
+            </div>
+        </div>
+    </div>
+    <script src="//at.alicdn.com/t/font_406874_luj4letynb384cxr.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $('.showlist').on('click', function () {
+            $(this).toggle();
+            $('.hidelist').toggle();
+            $('.navdetails').addClass('active');
+        });
+        $('.hidelist').on('click', function () {
+            $(this).toggle();
+            $('.showlist').toggle();
+            $('.navdetails').removeClass('active');
+        });
+    </script>
+
+</body>
+
+</html>

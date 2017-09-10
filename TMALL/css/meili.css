@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+.floorwrapper{
+    width: 1230px;
+    margin: 0 auto;
+}
+.floorwrapper>.floortop{
+    display: flex;
+    position: relative;
+    margin: 5px auto;
+}
+.floorwrapper>.floortop>.fashioncolor{
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    vertical-align: top;
+    background-color: #EA5F8D;
+}
+.floorwrapper>.floortop>.floorname{
+    vertical-align: top;
+    font-size: 18px;
+    color: #000;
+    line-height: 18px;
+    height: 18px;
+    margin-left: 10px;
+}
+.floorwrapper>.floortop>.floorname-en{
+    vertical-align: top;
+    font-size: 14px;
+    color: #000;
+    margin-left: 10px;
+    line-height: 24px;
+    height: 18px;
+}
+.floorwrapper>.floortop>.floorword{
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+}
+.floorwrapper>.floortop>.floorword a{
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 10px;
+    font-size: 14px;
+    border: none;
+    color: black;
+}
+.floorwrapper>.floortop>.floorword a:hover{
+    border-bottom: 1px solid #000;
+}
+.floorwrapper>.floormain{
+    width: 1230px;
+    height: 440px;
+    display: flex;
+    background: white;
+}
+.floorwrapper>.floormain>.floorleft{
+    width: 245px;
+    height: 440px;
+    background: #EA5F8D;
+    position: relative;
+}
+.floorwrapper>.floormain>.floorleft img{
+    max-width: 245px;
+}
+.floorwrapper>.floormain>.floorleft div{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.floorwrapper>.floormain>.floorleft .title-top{
+    bottom: 110px;
+    line-height: 30px;
+    background: rgba(255,255,255,.8);
+    overflow: hidden;
+}
+.floorwrapper>.floormain>.floorleft .title{
+    bottom: 60px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.floorwrapper>.floormain>.floorleft .title-sub{
+    bottom: 40px;
+    color: white;
+    font-size: 16px;
+}
+.floorwrapper>.floormain>.floormiddle{
+    width: 735px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.floorwrapper>.floormain>.floormiddle a{
+    width: 240px;
+    height: 220px;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    background: white;
+    position: relative;
+}
+.floorwrapper>.floormain>.floormiddle a:nth-child(4),
+.floorwrapper>.floormain>.floormiddle a:nth-child(5),
+.floorwrapper>.floormain>.floormiddle a:nth-child(6){
+   border-bottom: none; 
+}
+.floorwrapper>.floormain>.floormiddle .title{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 220px;
+    font-size: 18px;
+    line-height: 24px;
+    height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: black;
+}
+.floorwrapper>.floormain>.floormiddle .title-sub{
+    position: absolute;
+    top: 54px;
+    left: 25px;
+    width: 220px;
+    font-size: 14px;
+    z-index: 10;
+    line-height: 18px;
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EA5F8D;
+}
+.floorwrapper>.floormain>.floormiddle img{
+    max-width: 154px;
+    max-height: 154px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    transition:All 0.4s ease-in-out;
+}
+.floorwrapper>.floormain>.floormiddle img:hover{
+    transform:translate(-10px,0);
+}
+.floorwrapper>.floormain>.floorright{
+    width: 250px;
+    height: 440px;
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.floorwrapper>.floormain>.floorright a{
+    height: 147px;
+    width: 250px;
+    display: inline-block;
+    position: relative;
+    border-bottom:1px solid #999; 
+}
+.floorwrapper>.floormain>.floorright a:last-child{
+    border-bottom:none; 
+}
+.floorwrapper>.floormain>.floorright .title{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 220px;
+    font-size: 18px;
+    line-height: 24px;
+    height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: black;
+}
+.floorwrapper>.floormain>.floorright .title-sub{
+    position: absolute;
+    top: 54px;
+    left: 25px;
+    width: 220px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EA5F8D;
+}
+.floorwrapper>.floormain>.floorright img{
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    transition:All 0.4s ease-in-out;
+}
+.floorwrapper>.floormain>.floorright img:hover{
+    transform:translate(-10px,0);
+}

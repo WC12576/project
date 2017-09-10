@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.wrapper {
+    position: relative;
+    width: 1024px;
+    height: 1024px;
+    top: 30px;
+    background: linear-gradient(to bottom, #01c597, #00807f);
+    transform: translateY(-25%) scale(0.5);
+}
+/*star*/
+.star div{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.star div:nth-child(1){
+    top: 80px;
+    left: 160px;
+    background-color: #fff;
+}
+.star div:nth-child(2){
+    top: 30px;
+    left: 520px;
+    background-color: #f9ffff;
+}
+.star div:nth-child(3){
+    top: 225px;
+    left: 95px;
+    background-color: #edfffc;
+}
+.star div:nth-child(4){
+    top: 77px;
+    left: 386px;
+    background-color: #86e5d1;
+}
+.star div:nth-child(5){
+    top: 195px;
+    left: 195px;
+    background-color: #c6e3de;
+}
+.star div:nth-child(6){
+    top: 122px;
+    left: 624px;
+    background-color: #fffaff;
+}
+.star div:nth-child(7){
+    top: 358px;
+    left: 191px;
+    background-color: #aae3dc;
+}
+.star div:nth-child(8){
+    top: 416px;
+    left: 301px;
+    background-color: #78d3c2;
+}
+.star div:nth-child(9){
+    top: 471px;
+    left: 97px;
+    background-color: #3bbaa7;
+}
+.star div:nth-child(10){
+    top: 90px;
+    left: 671px;
+    background-color: #84e1ce;
+}
+.star div:nth-child(11){
+    top: 62px;
+    left: 822px;
+    background-color: #ffffff;
+}
+.star div:nth-child(12){
+    top: 158px;
+    left: 777px;
+    background-color: #ffffff;
+    
+}
+.star div:nth-child(13){
+    top: 151px;
+    left: 957px;
+    background-color: #ffffff;
+}
+.star div:nth-child(14){
+    top: 290px;
+    left: 800px;
+    background-color: #7ad8c6;
+}
+.star div:nth-child(15){
+    top: 370px;
+    left: 760px;
+    background-color: #91d3c9;
+}
+.star div:nth-child(16){
+    top: 350px;
+    left: 856px;
+    background-color: #3dbfa7;
+}
+.star div:nth-child(17){
+    top: 451px;
+    left: 966px;
+    background-color: #3bbca6;
+}
+.star div:nth-child(18){
+    top: 540px;
+    left: 715px;
+    background-color: #3ab9a6;
+}
+.star div:nth-child(even){
+    animation: stareven 2s both infinite;
+}
+.star div:nth-child(odd){
+    animation: starodd 2s both infinite;
+}
+@keyframes stareven {
+  0%, 50%, 100% {opacity: 1;}
+  25%, 75% {opacity: 0;}
+}
+@keyframes starodd {
+  0%, 50%, 100% {opacity: 0;}
+  25%, 75% {opacity: 1;}
+}
+/*person*/
+@keyframes person{
+    0% {top: 0;}
+    100% {top: 100px;}
+}
+.person {
+    position: relative;
+    top: 0;
+    margin-top: 140px;
+    margin-left: 275px;
+    width: 365px;
+    height: 670px;
+    z-index: 2;
+    animation: person 3s ease-out infinite alternate; 
+}
+.hat{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 310px 80px;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    border-color: transparent transparent #fff transparent;
+}
+.head{
+    position: absolute;
+    top: 90px;
+    left: 240px;
+    width: 110px;
+    height: 160px;
+    background-color: #392b22;
+    transform: rotate(30deg);
+    border-radius: 25px 85px 85px 25px/50%;
+}
+.face{
+    position: absolute;
+    width: 90px;
+    height: 145px;
+    top: 95px;
+    left: 262px;
+    transform: rotate(10deg);
+    border-radius: 40px 50px 50px 40px/50%;
+    background-color: #fff;
+    z-index: 1;
+}
+.neck{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 225px;
+    left: 235px;
+    border-radius: 0 0 50% 50%/0 0 8px 8px;
+    background-color: #392b22;
+}
+.skirt{
+    position: absolute;
+    width: 40px;
+    top: 150px;
+    left: 95px;
+    border-style: solid;
+    border-width: 110px 40px 110px 140px;
+    border-color: transparent transparent #fff transparent;
+    z-index: -1;
+}
+.hemline{
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    top: 320px;
+    left: 85px;
+    transform: rotate(10deg);
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 1;
+}
+.leftleg{
+    position: absolute;
+    width: 26px;
+    height: 150px;
+    top: 480px;
+    left: 200px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: inset 0 20px 30px #cbd6dc;
+}
+.rightleg{
+    position: absolute;
+    width: 26px;
+    height: 150px;
+    top: 460px;
+    left: 245px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: inset 0 60px 30px #cbd6dc;
+}
+.leftfoot{
+    position: absolute;
+    width: 35px;
+    height: 25px;
+    top: 615px;
+    left: 205px;
+    border-radius: 0 100% 100% 0/0 10px 15px 0;
+    background-color: #fff;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+.rightfoot{
+    position: absolute;
+    width: 35px;
+    height: 25px;
+    top: 595px;
+    left: 250px;
+    border-radius: 0 100% 100% 0/0 10px 15px 0;
+    background-color: #fff;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+.shadow{
+    position: absolute;
+    top: 540px;
+    left: 150px;
+    width: 200px;
+    height:140px;
+    background: radial-gradient(100px 70px,#b44b38,transparent);
+    z-index: -3;
+}
+/*底部动画*/
+@keyframes bottom1{
+    0% { border: 15px solid rgba(255, 255, 255, 0)}
+    100% {border: 15px solid rgba(255, 255, 255, 0.1)}
+}
+@keyframes bottom2{
+    0% { border: 15px solid rgba(255, 255, 255, 0.1)}
+    100% {border: 15px solid rgba(255, 255, 255, 0.3)}
+}
+@keyframes bottom3{
+    0% { border: 15px solid rgba(255, 255, 255, 0.3)}
+    100% {border: 15px solid rgba(255, 255, 255, 0.5)}
+}
+.station{
+    position: relative;
+    height: 466px;
+    width: 100%;
+    top: -255px;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.stationBottom{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: -165px;
+    left: 0px;
+    transform: rotate3d(1, 0, 0, 45deg);
+}
+.stationBottom>div{
+    display: flex;
+    width: 1000px;
+    height: 1000px;
+    border: 15px solid rgba(255, 255, 255, 0.1);
+    transform: scale(0.8) rotate(45deg);
+    animation: bottom1 3s  ease-out infinite alternate;
+}
+.stationBottom>div>div{
+    display: flex;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    border: 15px solid rgba(255, 255, 255, 0.3);
+    animation: bottom2 3s  ease-out infinite alternate;
+}
+.stationBottom>div>div>div{
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    border: 15px solid rgba(255, 255, 255, 0.5);
+    animation: bottom3 3s  ease-out infinite alternate;
+}
+/*座台动画*/
+@keyframes top1{
+    0% {height: 100px;top: 0;}
+    100% {height: 0;top: 100px;}
+}
+@keyframes top2{
+    0% {top: 0;}
+    100% {top: 100px;}
+}
+.stationTop{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    top: -64px;
+    left: 0px;
+    transform: rotate3d(1, 0, 0, 45deg);
+}
+.surface{
+    position: relative;
+    top: 0;
+    width: 350px;
+    height: 350px;
+    border: 50px solid #ffb753;
+    transform: scale(0.7) rotate(45deg);
+    animation: top2 3s ease-out infinite alternate; 
+}
+.surface>div{
+    width: 250px;
+    height: 250px;
+    border: 50px solid #f58b11;
+    background-color: #ffb753;
+}
+.surface>div>div{
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+    border: 50px solid #f58b11;
+    background-color: #ffb753;
+}
+.sideface {
+    position: relative;
+    top: -114px;
+    width: 446px;
+    height: 50px;
+}
+
+.sideface .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 223px;
+    height: 100px;
+    transform: skewY(45deg);
+    background-color: #74302f;
+    animation: top1 3s ease-out infinite alternate; */
+}
+
+.sideface .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 223px;
+    height: 100px;
+    transform: skewY(-45deg);
+    background-color: #cb6b14;
+    animation: top1 3s ease-out infinite alternate; 
+}
+.middle {
+    position: relative;
+    top: -15px;
+}
+
+.middle div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    border-style: solid;
+    border-width: 223px 223px 223px 0;
+    border-color: #74302f transparent #cb6b14 transparent;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    opacity: 0.5;
+}

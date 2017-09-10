@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>toolbar</title>
+    <link rel="stylesheet" href="css/Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <style>
+        .toolbar {
+            width: 40px;
+            height: 100%;
+            position: fixed;
+            right: 0px;
+            background: #000;
+            color: white;
+        }
+
+        .toolbar span {
+            width: 120px;
+            line-height: 35px;
+            background: #999;
+            display: none;
+            position: absolute;
+            left: -150px;
+            text-align: center;
+        }
+
+        .toolbar span::after {
+            content: '';
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-left-color: #999;
+        }
+
+        .toolbar .toolbar-middle {
+            height: 600px;
+            margin-top: 200px;
+        }
+
+        .toolbar .items {
+            margin-top: 10px;
+        }
+
+        .toolbar .items:hover {
+            background: red;
+        }
+
+        .toolbar .items:hover span {
+            display: inline-block;
+            cursor: pointer;
+            animation: mymove 1s;
+            animation-iteration-count:1;
+            animation-fill-mode:forwards;
+        }
+
+        @keyframes mymove {
+            from {
+                left: -150px;
+            }
+            to {
+                left: -120px;
+            }
+        }
+
+        .toolbar .items .TM-icon {
+            width: 40px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="height:1000px">
+    <div class="toolbar">
+        <div class="toolbar-middle">
+            <div class="items"><span>会员权益</span>
+                <div class="TM-icon icon-user"></div>
+            </div>
+            <div class="items"><span>购物车</span>
+                <div class="TM-icon icon-shopping-cart"></div>
+            </div>
+            <div class="items"><span>我的资产</span>
+                <div class="TM-icon icon-credit-card"></div>
+            </div>
+            <div class="items"><span>我关注的品牌</span>
+                <div class="TM-icon icon-star-empty"></div>
+            </div>
+            <div class="items"><span>我的收藏</span>
+                <div class="TM-icon icon-heart-empty"></div>
+            </div>
+            <div class="items"><span>我看过的</span>
+                <div class="TM-icon icon-group"></div>
+            </div>
+            <div class="items"><span>我要充值</span>
+                <div class="TM-icon icon-plus-sign-alt"></div>
+            </div>
+        </div>
+        <div class="toolbar-bottom">
+            <div class="items"><span>用户反馈</span>
+                <div class="TM-icon icon-file-alt"></div>
+            </div>
+            <div class="items"><span>下载APP</span>
+                <div class="TM-icon icon-qrcode"></div>
+            </div>
+            <div class="items"><span>返回顶部</span>
+                <div class="TM-icon icon-chevron-up"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  margin: 0; 
+}
+
+html {
+  min-height: 100; 
+}
+
+a {
+  text-decoration: none;
+  color: white; 
+}
+
+body {
+  display: flex;
+  height: 100%;
+  color: white;
+  background: #313243;
+  font-size: .42rem;
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+}
+
+input {
+  border: none;
+  border-width: 0;
+  border-style: none; 
+}
+
+input:focus {
+  outline: none; 
+}
+.container {
+  width: 8.64rem;
+  height: 12.44rem;
+  margin-top: 2.76rem;
+  margin-bottom: 2.44rem; 
+}
+.container .tabs,
+.container .text {
+  text-transform: uppercase; 
+}
+.container .tabs {
+  display: flex;
+  margin-bottom: .3276rem;
+  font-size: .4724rem;
+  justify-content: space-around; 
+}
+.container .tabs .tab {
+  position: relative;
+  transition: all .6s ease-out;
+  color: #65677C; 
+}
+.container .tabs .tab.active {
+  color: white; 
+}
+.container .content {
+  position: relative;
+  display: flex;
+  height: 6.4rem;
+  margin-top: .8rem;
+  justify-content: center;
+  flex-wrap: wrap; 
+ }
+.container .content label {
+  display: block;
+  height: 1.76rem;
+ }
+.container .content form {
+  border: 0 solid rgba(0, 0, 0, 0.38);
+  border-radius: 0.16rem;
+  background: #FFFFFF;
+  box-shadow: 0 .04rem .16rem 0 rgba(0, 0, 0, 0.46);
+}
+.container .content input {
+  display: block;
+  width: 8.64rem;
+  height: 100%;
+  padding-left: 1.2rem;
+  color: #9B9B9B;
+  font-size: .4164rem; 
+}
+.container .content input:first-child {
+  border-top-left-radius: 0.16rem;
+  border-top-right-radius: 0.16rem; 
+}
+.container .content input[type="submit"] {
+  height: 1.5256rem;
+  padding-left: 0;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border-bottom-right-radius: 0.16rem;
+  border-bottom-left-radius: 0.16rem;
+  background-color: #FF5E57;
+  font-size: inherit;
+  line-height: 1.5256rem; 
+}
+.container .content label {
+  position: relative; 
+}
+.container .content form>label>div {
+  position: absolute;
+  color: #A4E1EA;
+  top: 50%; 
+  left: 5%; 
+  transform: translateY(-50%)
+}
+
+.container .content label:first-child input {
+  border-bottom: 1px solid #303D4F; 
+}
+.container .content .sign-up label:Nth-child(2) input {
+  border-bottom: 1px solid #303D4F; 
+}
+.container .content .reset-password-link {
+  margin-top: .8rem;
+  text-align: center; 
+}
+.container .text {
+  position: relative;
+  width: .986rem;
+  height: .986rem;
+  margin: .88rem auto;
+  text-align: center;
+  color: #313243;
+  border-radius: 50%;
+  background-color: white;
+  font-size: .3076rem;
+  line-height: .986rem; 
+}
+.container .text::after {
+  position: absolute;
+  z-index: -1;
+  top: .493rem;
+  left: .493rem;
+  width: 2.2224rem;
+  content: '';
+  transform: translateX(-50%);
+  border-bottom: .02rem solid white;
+     
+}
+.container .facebook {
+  display: flex;
+  height: 1.56rem;
+  cursor: pointer;
+  border-radius: .16rem;
+  background-color: #507CC0;
+  justify-content: center;
+  align-items: center; 
+}
+.container .facebook p {
+  padding-left: .52rem;
+  font-size: .36rem; 
+}
+.container .facebook .icon-facebook {
+  font-size: .432rem; 
+}
+
+.content > div {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  transition: transform .6s ease-out;
+  transform: translateY(-0.2rem);
+  opacity: 0.9; 
+}
+
+.content > div.active {
+  visibility: visible;
+  transition: transform .6s ease-out;
+  transform: translateY(0rem);
+  opacity: 1; 
+}
+
+.tab::before {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  width: .1112rem;
+  height: .1112rem;
+  content: '';
+  transition: transform .6s ease-out;
+  transform: scale(0);
+  border-radius: 50%;
+  background-color: #FF5E57;
+  box-shadow: 0 0 0.24rem 0 #FF5E57; 
+}
+
+.tab.active::before {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  width: .1112rem;
+  height: .1112rem;
+  content: '';
+  transition: transform .6s ease-out;
+  transform: scale(1);
+  border-radius: 50%;
+  background-color: #FF5E57;
+  box-shadow: 0 0 .24rem 0 #FF5E57; 
+}
+.welcome{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background:rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center; 
+  z-index: 2;
+
+}
+.welcome>div{
+  width: 8.64rem;
+  height: 12.44rem;
+  margin-top: 2.76rem;
+  margin-bottom: 2.44rem; 
+  background: white;
+  border-radius: 10px;
+}
+

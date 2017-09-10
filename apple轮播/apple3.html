@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>苹果banner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/apple3.css">
+</head>
+
+<body>
+    <div class="containe">
+        <a class="arrow-left" href="#"><span></span></a>
+        <a class="arrow-right" href="#"><span></span></a>
+        <div class="wrapper">
+            <div class="slide slide1">
+                <img src="img/apple-1.jpg" alt="">
+                <div class="title">
+                    <h2>iPad Pro</h2>
+                    <p>不只能做到，</p>
+                    <p>还能做到更好。</p>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <img src="img/apple-5.jpg" alt="">
+                <div class="title">
+                    <h2>iOS 11</h2>
+                    <p>为iPhone带来巨大进步，</p>
+                    <p>让iPad实现里程碑式飞跃。</p>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <img src="img/apple-2.jpg" alt="">
+                <div class="title">
+                    <h2>Mac</h2>
+                    <p>全线提速。</p>
+                </div>
+            </div>
+            <div class="slide slide4">
+                <img src="img/apple-3.jpg" alt="">
+                <div class="title">
+                    <h2>macOS High Sierra</h2>
+                    <p>你的Mac，登上更高峰。</p>
+                </div>
+            </div>
+            <div class="slide slide5">
+                <img src="img/apple-4.jpg" alt="">
+                <div class="title">
+                    <h2>watchOS</h2>
+                    <p>更直观，更智能，更显你的风格。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="pagination">
+        <li><span><i></i></span></li>
+        <li><span><i></i></span></li>
+        <li><span><i></i></span></li>
+        <li><span><i></i></span></li>
+        <li><span><i></i></span></li>
+    </ul>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+        var $containe = $('.containe')
+        var $wrapper = $('.wrapper')
+        var $slide = $('.slide')
+        var $pagination = $('.pagination')
+        var width = $containe.width()
+        var count = $slide.length
+        var currentIndex = 0
+        var lock = true
+        var timeId
+        $slide.first().clone().appendTo($wrapper)
+        $slide.last().clone().prependTo($wrapper)
+        $wrapper.css({ left: -width })
+        $pagination.find('li').removeClass('arrow active').eq(0).addClass('active')
+        function playNext(num) {
+            let width = $containe.width()
+            $wrapper.animate({ left: "-=" + width * num }, 1000, function () {
+                currentIndex += num
+                if (currentIndex >= count) {
+                    let width = $containe.width()
+                    $wrapper.css({ left: -width })
+                    currentIndex = 0
+                }
+                lock = true
+            })
+        }
+        function playPre(num) {
+            let width = $containe.width()
+            $wrapper.animate({ left: "+=" + width * num }, 1000, function () {
+                currentIndex -= num
+                if (currentIndex < 0) {
+                    let width = $containe.width()
+                    $wrapper.css({ left: -width * count })
+                    currentIndex = count - 1
+                }
+                lock = true
+            })
+        }
+        function autoPlay() {
+            timeId = setInterval(function () {
+                playNext(1)
+                $pagination.find('li').removeClass('arrow active').eq(currentIndex + 1).addClass('active')
+                if (currentIndex === 4) {
+                    $pagination.find('li').removeClass('arrow active').eq(0).addClass('active')
+                }
+            }, 4000)
+        }
+        $('.arrow-left').click(function () {
+            clearInterval(timeId)
+            if (lock === false) { return };
+            lock = false
+            playPre(1)
+            $pagination.find('li').removeClass('arrow active').eq(currentIndex - 1).addClass('arrow')
+        })
+        $('.arrow-right').click(function () {
+            clearInterval(timeId)
+            if (lock === false) { return };
+            lock = false
+            playNext(1)
+            setStyle()
+        })
+        $pagination.on('click', 'li', function () {
+            clearInterval(timeId)
+            let index = $(this).index()
+            console.log(index)
+            playNext(index - currentIndex)
+            $pagination.find('li').removeClass('arrow active').eq(index).addClass('arrow')
+        })
+        autoPlay()
+        $wrapper.on('mouseenter', function () {
+            clearInterval(timeId)
+        })
+        $wrapper.on('mouseleave', function () {
+            autoPlay()
+        })
+        function setStyle() {
+            $pagination.find('li').removeClass('arrow active').eq(currentIndex + 1).addClass('arrow')
+            if (currentIndex === 4) {
+                $pagination.find('li').removeClass('arrow active').eq(0).addClass('arrow')
+            }
+        }
+    </script>
+
+</body>
+
+</html>

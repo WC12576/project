@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>topbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 30px;
+            background: #F2F2F2;
+            font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+            color: #666;
+        }
+        /*包裹div使login、links同行*/
+        .warpper {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        /*login样式*/
+        .login {
+            margin-left: 10%;
+        }
+
+        .login>li {
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        /*lingks样式*/
+        .links {
+            margin-left: 20%;
+        }
+
+        .links>li {
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            height: 30px;
+            padding-top: 5px;
+        }
+        /*小三角及动画*/
+        .links .arrow:hover {
+            background: white;
+        }
+
+        .links>.arrow::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 3px solid #666;
+            position: absolute;
+            top: 50%;
+            right: 2px;
+        }
+
+        .links>.arrow:hover::after {
+            content: '';
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+
+        .links>.arrow li {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+
+        .links>.split {
+            width: 1px;
+            height: 20px;
+            background: #666;
+            top: 5px;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 5px;
+        }
+
+        .links>li>ul {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: -1px;
+            background: white;
+            width: 100px;
+            border-bottom: 1px solid #F2F2F2;
+            border-left: 1px solid #F2F2F2;
+            border-right: 1px solid #F2F2F2;
+        }
+
+        .links>li:hover>ul {
+            display: block;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #c81623;
+        }
+        /*心形*/
+        .links>.heart {
+            position: relative;
+            width: 12px;
+            height: 11px;
+            padding: 0;
+            margin-left: 5px;
+            margin-right: -12px;
+        }
+
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: "";
+            left: 6px;
+            top: 0;
+            width: 6px;
+            height: 10px;
+            background: red;
+            -moz-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 0 100%;
+            -moz-transform-origin: 0 100%;
+            -ms-transform-origin: 0 100%;
+            -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+        }
+
+        .heart:after {
+            left: 0;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transform-origin: 100% 100%;
+            -moz-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            -o-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="warpper">
+            <ul class="login">
+                <li><span>喵，欢迎来天猫</span></li>
+                <li><a href="">请登录</a></li>
+                <li><a href="">免费注册</a></li>
+            </ul>
+            <ul class="links">
+                <li class="arrow"><a href="">我的淘宝</a>
+                    <ul>
+                        <li><a href="">已买到的宝贝</a></li>
+                        <li><a href="">已卖出的宝贝</a></li>
+                    </ul>
+                </li>
+                <li class="heart"></li>
+                <li><a href="">我关注的品牌</a></li>
+                <li><a href="">购物车0件</a></li>
+                <li class="arrow"><a href="">收藏夹</a>
+                    <ul>
+                        <li><a href="">收藏的宝贝</a></li>
+                        <li><a href="">收藏的店铺</a></li>
+                    </ul>
+                </li>
+                <li class="split"></li>
+                <li><a href="">手机版</a></li>
+                <li><a href="">淘宝网</a></li>
+                <li><a href="">企业购</a></li>
+                <li class="arrow"><a href="">商家支持</a>
+                    <ul>
+                        <li><a href="">商家</a></li>
+                        <li><a href="">帮助</a></li>
+                    </ul>
+                </li>
+                <li><a href="">网站导航</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

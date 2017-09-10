@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="page">
+        <canvas id="draw"></canvas>
+        <div id="edit">
+            <section class="tool">
+                <span>工具</span>
+                <div class="paint">绘画</div>
+                <div class="earser">橡皮擦</div>
+                <div class="empty">清空</div>
+            </section>
+            <section class="lineWidth">
+                <span>粗细</span>
+                <div class="thin">细</div>
+                <div class="middle">中</div>
+                <div class="wide">粗</div>
+            </section>
+            <section class="color">
+                <span>颜色</span>
+                <div class="allColor">
+                    <div class="black">黑</div>
+                    <div class="red">红</div>
+                    <div class="yellow">黄</div>
+                    <div class="blue">蓝</div>
+                    <div class="green">绿</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/lineWidth.js"></script>
+    <script src="js/color.js"></script>
+    <script>
+        /*
+        ctx.beginPath(); // 开始路径绘制
+        ctx.moveTo(20, 20); // 设置路径起点，坐标为(20,20)
+        ctx.lineTo(200, 20); // 绘制一条到(200,20)的直线
+        ctx.lineTo(300, 200);
+        ctx.closePath()
+        ctx.lineWidth = 2.0; // 设置线宽 有默认值
+        ctx.lineCap = "butt"; //设置端点样式:butt(默认),round,square
+        ctx.lineJoin = "miter"; //设置连接样式:miter(默认),bevel,round
+        ctx.strokeStyle = 'red'; // 设置线的颜色
+        ctx.stroke(); // 进行线的着色，这时整条线才变得可见
+*/
+    </script>
+</body>
+
+</html>
