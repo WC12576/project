@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://wc12576.github.io/project/react-demo/react-todoList/build",
   "dependencies": {
+    "leancloud-storage": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13"
@@ -13,6 +14,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-    
   }
 }
