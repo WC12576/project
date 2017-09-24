@@ -190,7 +190,7 @@ table {
 }
 .mypro .prolist img {
     
-    height: 100%;
+    width: 100%;
 }
 .mypro .prolist a::before {
     content: '';
